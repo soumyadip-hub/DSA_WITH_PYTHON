@@ -56,16 +56,26 @@
 
 # ------searching an elment in array-------
 
-import array
+# import array
 
-my_array1 = array.array("i", [1, 2, 3, 4, 5])
-
-
-def linear_search(arr, target):
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i
-    return -1
+# my_array1 = array.array("i", [1, 2, 3, 4, 5])
 
 
-print(linear_search(my_array1, 5))
+# def linear_search(arr, target):
+#     for i in range(len(arr)):
+#         if arr[i] == target:
+#             return i
+#     return -1
+
+
+# print(linear_search(my_array1, 5))
+
+# --------deletion of an element in array--------
+
+from array import *
+
+arr1 = array("i", [1, 2, 3, 4, 5, 6])
+
+arr1.remove(4)
+
+print(arr1)
