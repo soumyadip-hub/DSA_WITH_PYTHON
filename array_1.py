@@ -72,10 +72,10 @@
 
 # --------deletion of an element in array--------
 
-from array import *
+# from array import *
 
-arr1 = array("i", [1, 2, 3, 4, 5, 6])
+# arr1 = array("i", [1, 2, 3, 4, 5, 6])
 
-arr1.remove(4)
+# arr1.remove(4)
 
-print(arr1)
+# print(arr1)
