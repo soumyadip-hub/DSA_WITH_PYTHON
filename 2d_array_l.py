@@ -51,3 +51,8 @@ print(searchTDarray(twoDarray, 1))
 print(searchTDarray(twoDarray, 44))
 print(searchTDarray(twoDarray, 99))
 print(searchTDarray(twoDarray, 55))
+
+# deletion of 2D array
+
+newTDarray = np.delete(twoDarray, 0, axis=0)
+print(newTDarray)
