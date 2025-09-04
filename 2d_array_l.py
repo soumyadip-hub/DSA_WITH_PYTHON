@@ -24,3 +24,14 @@ def acessElements(array, rowindex, colindex):
 
 
 acessElements(twoDarray, 2, 3)
+
+# traversing Two Dimensional Array
+
+
+def traverseTDarray(array):
+    for i in range(len(array)):
+        for j in range(len(array[0])):
+            print(array[i][j])
+
+
+traverseTDarray(twoDarray)
