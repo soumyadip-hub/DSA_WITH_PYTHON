@@ -35,3 +35,19 @@ def traverseTDarray(array):
 
 
 traverseTDarray(twoDarray)
+
+# searching of two dimensional array
+
+
+def searchTDarray(array, value):
+    for i in range(len(array)):  # loop through rows
+        for j in range(len(array[0])):  # loop through columns
+            if array[i][j] == value:  # check if element matches
+                return "The value is located at index (" + str(i) + ", " + str(j) + ")"
+    return "The element is not found"
+
+
+print(searchTDarray(twoDarray, 1))
+print(searchTDarray(twoDarray, 44))
+print(searchTDarray(twoDarray, 99))
+print(searchTDarray(twoDarray, 55))
