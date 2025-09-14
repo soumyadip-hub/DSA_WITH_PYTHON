@@ -1,15 +1,14 @@
 class StarCookie:
-    pass
+    def __init__(self, color, weight):
+        self.color = color
+        self.weight = weight
+        pass
 
 
-star_cookie1 = StarCookie()
-star_cookie1.weight = 19  # type: ignore
-star_cookie1.color = "Red"
-print(star_cookie1.weight)
+star_cookie1 = StarCookie("Red", 16)
 print(star_cookie1.color)
-star_cookie2 = StarCookie()
-star_cookie2.weight = 14
-star_cookie2.color = "green"
+print(star_cookie1.weight)
+star_cookie2 = StarCookie("green", 20)
 print(star_cookie2.weight)
 print(star_cookie2.color)
 
@@ -18,3 +17,8 @@ print(star_cookie2.color)
 #       class StarCookie:
 #             def __init__(self):
 #                   (initialize attributes)
+
+# now set attribute in initializer [to set attributes in every objects]
+#          class StarCookie:
+#               def __init__(self,color):
+#                       self.color = color
