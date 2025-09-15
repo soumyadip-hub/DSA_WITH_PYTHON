@@ -9,5 +9,14 @@ class node:
         self.next = None
 
 
-new_node = node(10)
-print(new_node)
+# lets create singly linked list
+class LinkedList:
+    def __init__(self, value):
+        new_node = node(value)
+        self.head = new_node
+        self.tail = new_node
+        self.length = 1
+
+
+new_linked_list = LinkedList(10)
+print(new_linked_list.length)
