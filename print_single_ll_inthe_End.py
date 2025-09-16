@@ -1,0 +1,41 @@
+class Node:  # class names are usually written in PascalCase
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+
+    def __str__(self):
+        temp_node = self.head
+        result = ""
+        while temp_node is not None:
+            result += str(temp_node.value)
+            if temp_node.next is not None:
+                result += " --> "
+            temp_node = temp_node.next
+        return result
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:  # if the list is empty
+            self.head = new_node
+            self.tail = new_node
+        else:  # otherwise, attach new_node at the end
+            self.tail.next = new_node  # type: ignore
+            self.tail = new_node
+        self.length += 1
+
+
+# testing
+new_linked_list = LinkedList()
+new_linked_list.append(10)
+new_linked_list.append(20)
+new_linked_list.append(30)
+new_linked_list.append(40)
+new_linked_list.append(50)
+print(new_linked_list)
