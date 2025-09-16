@@ -3,20 +3,37 @@
 
 
 # let's create at first node class constructor
-class node:
+
+
+class Node:  # class names are usually written in PascalCase
     def __init__(self, value):
         self.value = value
         self.next = None
 
 
-# lets create singly linked list
 class LinkedList:
-    def __init__(self, value):
-        new_node = node(value)
-        self.head = new_node
-        self.tail = new_node
-        self.length = 1
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:  # if the list is empty
+            self.head = new_node
+            self.tail = new_node
+        else:  # otherwise, attach new_node at the end
+            self.tail.next = new_node  # type: ignore
+            self.tail = new_node
+        self.length += 1
 
 
-new_linked_list = LinkedList(10)
-print(new_linked_list.length)
+# testing
+new_linked_list = LinkedList()
+new_linked_list.append(10)
+new_linked_list.append(20)
+
+print(new_linked_list.head.value)  # type: ignore # Output: 10
+print(new_linked_list.head.next.value)  # type: ignore # Output: 20
+
+# insertion in linked list in 3 way ---(i)at the beggining (ii)in the middle of linked list (iii)at the end of linked list
